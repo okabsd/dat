@@ -1,0 +1,42 @@
+.TH DAT 1 "JULY 2021" ISC "USER MANUALS"
+.SH NAME
+dat \- output random data
+.SH SYNOPSIS
+.B dat
+.I length
+[
+.I characters
+]
+.SH DESCRIPTION
+.PP
+.B dat
+prints
+.I
+length
+number of characters to its standard output, reading them randomly from the default
+character set:
+.RS
+.PP
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ `~!@#$%^&*()_+-={}[]:";'<>?,./|\\
+.PP
+(This set includes the space character.)
+.RE
+.PP
+.B dat
+does
+.B not
+place a newline after the random output.
+.PP
+.B dat
+optionally accepts a user-specified set, provided as its second argument.
+This set replaces the default set entirely.
+This set is not checked for uniqueness amongst its characters.
+.PP
+.B dat
+is not cryptographically secure in any way, and makes no guarantees about the
+quality of the randomness it provides. This program presents non-uniform distributions.
+.SH AUTHORS
+Written and maintained by Oka <yo@oka.io>.
+.SH COPYRIGHT
+.BR dat
+is available under the ISC license.

@@ -1,0 +1,26 @@
+dat - output random data
+
+installation:
+	make
+	make install
+
+usage:
+	dat 51
+	dat 32 "0123456789abcdef"
+	dat 8 "01"
+
+documentation:
+	man dat
+
+dat prints the number of characters specified to its standard output
+dat optionally treats its second argument as the source character set
+default character set is the space character, plus:
+	abcdefghijklmnopqrstuvwxyz
+	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+	`~!@#$%^&*()_+-={}[]:";'<>?,./|\
+dat does not output a newline
+
+not cryptographically secure by any means
+presents non-uniform distributions
+
+oka <yo@oka.io>
